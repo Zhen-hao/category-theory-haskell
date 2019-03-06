@@ -9,9 +9,9 @@ newtype Reader e a = Reader (e -> a)
 instance Functor (Reader e) where
     fmap f (Reader g) = Reader (f . g)
 
-newtype Op r a = Op (a -> r)
-instance Contravariant (Op r) where
-    contramap f (Op g) = Op (g . f)
+newtype MyOp r a = MyOp (a -> r)
+instance Contravariant (MyOp r) where
+    contramap f (MyOp g) = MyOp (g . f)
 
 -- Challenge 1
 data Pair a b = Pair a b

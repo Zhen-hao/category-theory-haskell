@@ -1,4 +1,4 @@
-module NaturalTransfermations where
+module NaturalTransformations where
 import Functors
 
 
